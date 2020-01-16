@@ -106,6 +106,7 @@ if activator = '0' then
                 end case;
             end case;
         else
+			-- The scrolling part (Welcome Display whatnot)
             case selectorM is
             when "00" =>
                 SSEG_AN <= "0111"; 
@@ -332,8 +333,7 @@ else
         SSEG_AN <= "1011"; 
         SSEG_CA <= "1111111";
     when "10" =>
-        SSEG_AN <= "1101"; 
-        --SSEG_CA <= "1000000";
+        SSEG_AN <= "1101";
         case OR_output(7 downto 4) is
             when "0000" => SSEG_CA <= "1000000"; -- "0"     
             when "0001" => SSEG_CA <= "1111001"; -- "1" 
@@ -354,7 +354,6 @@ else
         end case;
     when "11" =>
         SSEG_AN <= "1110";
-        --SSEG_CA <= "1000000";
         case OR_output(3 downto 0) is
             when "0000" => SSEG_CA <= "1000000"; -- "0"     
             when "0001" => SSEG_CA <= "1111001"; -- "1" 

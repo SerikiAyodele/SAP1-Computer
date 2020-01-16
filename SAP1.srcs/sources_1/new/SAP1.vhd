@@ -19,6 +19,8 @@ entity SAP1 is
    );
 end SAP1;
 
+-- Button description
+
 -- Clear/Reset      - BTN(0)    --Ccenter
 -- Run              - SW(11) 
 -- Write to RAM     - BTN(1)    --left
@@ -31,11 +33,6 @@ end SAP1;
 
 architecture Behavioral of SAP1 is
 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
 
 --Some major wire signals
 --signal W_bus: std_logic_vector (7 downto 0) := "11110000";
@@ -61,9 +58,7 @@ signal cout: std_logic;
 --Output register signal
 signal OR_output: std_logic_vector (7 downto 0);
 
-----------------------------------------------
 signal RAM_output: std_logic_vector (7 downto 0);
-----------------------------------------------
 
 signal clock_activator: std_logic;
 
@@ -223,7 +218,6 @@ begin
         W_in_OR <= W_bus;
     end if;
     
-    --LED(15 downto 8) <= W_bus;
 end process;
 
 SCREEN: welcome_display
@@ -267,7 +261,6 @@ port map(W_in_BR, clockline, Lb, BTN(0), AS_b_register);
 OR9: output_register
 port map(W_in_OR, clockline, Lo, BTN(0), OR_output);
 
---LED(7 downto 0) <= OR_output;
 clock_activator <= (not HALT) and SW(11);
 
 process (HALT)
