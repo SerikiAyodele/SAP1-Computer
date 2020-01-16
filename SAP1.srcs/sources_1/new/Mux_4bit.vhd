@@ -2,6 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_unsigned.all;
 
+-- Written by yours truly, Mia 
 
 entity Mux_4bit is
 port (  input_1: in std_logic_vector (3 downto 0);

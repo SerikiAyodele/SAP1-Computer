@@ -36,7 +36,6 @@ begin
     -- Read Functional Section
     process(Clock, Read, Clear)
     begin
---        if (Clock'event and Clock='1') then
             if Enable='1' then
             if Read='1' then
                 -- buildin function conv_integer change the type
@@ -46,9 +45,6 @@ begin
                 Data_out <= (Data_out'range => 'Z');
             end if;
             end if;
---        end if;
-    
-        --Data_out <= "00000000";
     
     end process;
 	

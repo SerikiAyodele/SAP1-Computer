@@ -1,10 +1,3 @@
----------------------------------------------------
--- n-bit Register (ESD book figure 2.6)
--- by Weijun Zhang, 04/2001
---
--- KEY WORD: concurrent, generic and range
----------------------------------------------------
-	
 library ieee ;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;

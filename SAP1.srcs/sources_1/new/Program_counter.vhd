@@ -17,7 +17,7 @@ end Program_counter;
 
 architecture behv of Program_counter is		 	  
 	
-    signal Pre_Q: std_logic_vector(3 downto 0);-- := "0000";
+    signal Pre_Q: std_logic_vector(3 downto 0);
     signal Q_bin: std_logic_vector(3 downto 0);
 
 begin
@@ -35,8 +35,6 @@ begin
             Q_bin <= Pre_Q;
      end if;
     end process;	
-    -- concurrent assignment statement
-    --Q <= Pre_Q;
 
 process(Ep)
 begin
