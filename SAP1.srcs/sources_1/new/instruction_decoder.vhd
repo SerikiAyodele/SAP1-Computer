@@ -10,6 +10,14 @@ end instruction_decoder;
 
 architecture Behavioral of instruction_decoder is
 
+-- Group 5 300L OpCodes
+
+-- LOAD			1010
+-- ADD			0011
+-- SUBTRACT		1000
+-- OUTPUT		1110
+-- HALT			0001
+
 begin
 
 LDA <= ( I7) and (not I6) and ( I5) and (not I4);

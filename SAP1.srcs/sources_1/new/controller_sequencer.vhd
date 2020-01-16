@@ -5,7 +5,8 @@ use ieee.std_logic_unsigned.all;
 entity controller_sequencer is
 port (  CLK: in std_logic;
         I: in std_logic_vector (7 downto 4);
-        Cp,Ep,Lm,CE, Li, Ei,La,Ea,Su,Eu,Lb,Lo, HALT: out std_logic );
+        Cp,Ep,Lm,CE, Li, Ei,La,Ea,Su,Eu,Lb,Lo, HALT: out std_logic 
+);
 end controller_sequencer;
 
 architecture Behavioral of controller_sequencer is
@@ -21,7 +22,8 @@ signal LDA, ADD, SUB, OUTPUT, HLT: std_logic;
     
     component ring_counter
     port (  CLK: in std_logic;
-        T: inout std_logic_vector (6 downto 1) );
+			T: inout std_logic_vector (6 downto 1) 
+	);
     end component;
     
 begin
