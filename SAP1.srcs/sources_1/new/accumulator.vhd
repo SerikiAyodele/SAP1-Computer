@@ -8,7 +8,7 @@ entity accumulator is
 
 port(	I:	in std_logic_vector(7 downto 0);
 	clock:	in std_logic;
-	La, Ea:	in std_logic; -- ~La  Ea
+	La, Ea:	in std_logic; 					-- ~La  Ea
 	clear:	in std_logic;
 	Qas:	out std_logic_vector(7 downto 0);  -- To addersubtractor
 	Qb:	out std_logic_vector(7 downto 0)       -- TO bus
@@ -43,7 +43,6 @@ process(La)
     if La = '0' then
         I_bo <= I;
     else
-        --I_bo <= "ZZZZZZZZ";
         I_bo <= Q_dup;
     end if;
 end process;

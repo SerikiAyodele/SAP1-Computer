@@ -7,7 +7,7 @@ use ieee.std_logic_unsigned.all;
 entity adder_subtractor is
 
 port(	
-        A, B: in std_logic_vector (7 downto 0); -- A is from Accumulator and B is from B reigister
+        A, B: in std_logic_vector (7 downto 0);    -- A is from Accumulator and B is from B-reigister
         Su, Eu: in std_logic;
         Result: out std_logic_vector (7 downto 0); -- Result is To bus
         Cout: out std_logic
